@@ -20,11 +20,14 @@ module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 
+  require('cypress-log-to-output').install(on);
+
   on('before:browser:launch', (browser, launchOptions) => {
     const extensionPath = path.resolve(__dirname, '..', '..' , 'extensions/aihomhdbhpnpmcnnbckjjcebjoikpihj')
 
-    console.log('Adding Universal K...')
-    launchOptions.args.push(`--load-extension=${extensionPath}`)
+    console.log('Adding Universal K...');
+    launchOptions.args.push(`--load-extension=${extensionPath}`);
+    // launchOptions.args.push(`--headless`);
 
     return launchOptions;
   })

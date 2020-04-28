@@ -13,6 +13,7 @@
     "cypress": "^4.4.1"
   },
   "devDependencies": {
-    "cypress-browser-extension-plugin": "^0.1.0"
+    "cypress-browser-extension-plugin": "^0.1.0",
+    "cypress-log-to-output": "^1.0.8"
   }
 }
